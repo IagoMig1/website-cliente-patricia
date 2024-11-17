@@ -1,0 +1,225 @@
+.navbar {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+.section-presentation {
+    position: relative;
+    min-height: 70vh;
+    background: linear-gradient(120deg, rgba(18, 112, 58, 0.9), rgba(250, 211, 0, 0.9));
+    overflow: hidden;
+    opacity: 0; 
+    transform: translateY(50px); 
+    animation: fadeIn 1.5s ease-out forwards; 
+}
+.carousel-inner {
+    max-width: 500px; 
+    height: 500px;    
+    overflow: hidden; 
+  }
+
+  .carousel-inner img {
+    width: 100%;   
+    height: 100%;     
+    object-fit: cover; 
+  }
+
+
+.section-presentation .text-container {
+    max-width: 600px;
+    z-index: 2;
+}
+
+.section-presentation h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.section-presentation p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+
+.section-presentation .image-container img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+
+.section-presentation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1%, transparent 70%);
+    animation: move-bg 10s linear infinite;
+    z-index: 1;
+}
+
+
+@keyframes move-bg {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.section-presentation .container {
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.section-about {
+    position: relative;
+    min-height: 100vh;
+    background: #ffffff; 
+    overflow: hidden;
+    opacity: 0; 
+    transform: translateY(50px); 
+    animation: fadeIn 1.5s ease-out forwards; 
+}
+
+.section-about .text-container {
+    max-width: 600px;
+    z-index: 2;
+    text-align: justify;
+}
+
+.section-about h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.section-about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333; 
+}
+
+.section-about .image-container img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+
+.section-about .container {
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.section-services {
+    background: #f8f9fa; 
+    padding: 50px 0;
+    opacity: 0; 
+    transform: translateY(50px); 
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.section-services h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.section-services .service-box {
+    padding: 20px;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    background: #ffffff;
+    opacity: 0; 
+    transform: translateY(50px); 
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Hover effect */
+.section-services .service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.section-services .service-box h4 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.section-services .service-box p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    color: #6c757d; 
+}
+
+
+img.img-fluid.rounded {
+    border-radius: 15px; 
+}
+
+
+.politica-section, .empreendedora-section {
+    padding: 40px 0;
+    opacity: 0; 
+    transition: opacity 1s ease-in-out; 
+  }
+
+  .politica-section.appear, .empreendedora-section.appear {
+    opacity: 1; 
+  }
+
+  .politica-content, .empreendedora-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .politica-text, .empreendedora-text {
+    max-width: 50%;
+  }
+
+  .politica-img, .empreendedora-img {
+    max-width: 50%;
+  }
+
+  .politica-img img, .empreendedora-img img {
+    max-width: 100%;
+    height: auto;
+  }
+  .appear {
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
